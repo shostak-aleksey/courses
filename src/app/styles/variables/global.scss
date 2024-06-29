@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:800i&display=swap');
+
+:root {
+  --font-family: 'Chicle', serif;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 20px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 48px;
+  --font-size-xxxl: 64px;
+
+  --font-line-height-xxs: 16px;
+  --font-line-height-xs: 20px;
+  --font-line-height-s: 24px;
+  --font-line-height-m: 28px;
+  --font-line-height-l: 32px;
+  --font-line-height-xl: 40px;
+  --font-line-height-xxl: 48px;
+  --font-line-height-xxxl: 64px;
+
+  --font-xxs: var(--font-size-xxs) / var(--font-line-height-xxs)
+    var(--font-family);
+  --font-xs: var(--font-size-xs) / var(--font-line-height-xs) var(--font-family);
+  --font-s: var(--font-size-s) / var(--font-line-height-s) var(--font-family);
+  --font-m: var(--font-size-m) / var(--font-line-height-m) var(--font-family);
+  --font-l: var(--font-size-l) / var(--font-line-height-l) var(--font-family);
+  --font-xl: var(--font-size-xl) / var(--font-line-height-xl) var(--font-family);
+  --font-xxl: var(--font-size-xxl) / var(--font-line-height-xxl)
+    var(--font-family);
+  --font-xxxl: var(--font-size-xxxl) / var(--font-line-height-xxxl)
+    var(--font-family);
+
+  // Отступы
+  --margin-xxs: 0.25rem;
+  --margin-xs: 0.5rem;
+  --margin-s: 0.75rem;
+  --margin-m: 1rem;
+  --margin-l: 1.5rem;
+  --margin-xl: 2rem;
+  --margin-xxl: 3rem;
+
+  // Размеры
+  --navbar-height: 60px;
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 70px;
+  --footer-height: 50px;
+  --content-padding: 20px;
+  --font-size-base: 16px;
+  --font-size-large: 20px;
+  --font-size-small: 12px;
+  --border-radius: 5px;
+  --transition-duration: 0.3s;
+  --max-content-width: 1200px;
+  --sidebar-padding: 10px;
+  // Shadows
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

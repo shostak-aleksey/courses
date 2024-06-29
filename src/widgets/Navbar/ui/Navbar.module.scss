@@ -1,0 +1,21 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  height: var(--navbar-height);
+  width: 100%;
+  background: var(--inverted-bg-color);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  color: var(--inverted-text-color);
+}
+
+.link {
+  margin: 0 12px;
+}

@@ -1,0 +1,14 @@
+.burger {
+  margin-left: auto;
+}
+
+.collapseBtn {
+  margin-left: calc(var(--margin-l) - 5px);
+  width: 32px;
+  height: 32px;
+  background: var(--inverted-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
