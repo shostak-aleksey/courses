@@ -1,4 +1,3 @@
-/* eslint-disable i18next/no-literal-string */
 import './styles/index.scss';
 import { Suspense } from 'react';
 import { Navbar } from 'widgets/Navbar';

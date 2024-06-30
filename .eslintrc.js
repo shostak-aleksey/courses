@@ -42,13 +42,14 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'linebreak-style': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': [
-            'error',
-            {
-                markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to'],
-            },
-        ],
+        'i18next/no-literal-string': 'off',
+        // 'i18next/no-literal-string': [
+        //     'error',
+        //     {
+        //         markupOnly: true,
+        //         ignoreAttribute: ['data-testid', 'to'],
+        //     },
+        // ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
