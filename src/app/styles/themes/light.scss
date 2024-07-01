@@ -1,0 +1,43 @@
+// .light {
+//   --bg-color: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8);
+//   --inverted-bg-color: #f0f0f5; /* Light space grey background for inverted theme */
+
+//   --primary-color: linear-gradient(45deg, #8a2be2, #7b68ee, #6a5acd); /* Electric indigo primary color gradient */
+//   --inverted-primary-color: linear-gradient(45deg, #ff4500, #ff6347, #ff7f50); /* Orange red primary color gradient for inverted theme */
+
+//   --secondary-color: linear-gradient(to right, #483d8b, #ff6347); /* Dark slate blue secondary color */
+//   --inverted-secondary-color: linear-gradient(to right, #ff6347, #ff7f50); /* Tomato secondary color gradient for inverted theme */
+
+//   --text-color: linear-gradient(45deg, #dcdcdc, #d3d3d3, #c0c0c0); /* Gainsboro text color gradient */
+//   --inverted-text-color: linear-gradient(45deg, #2f4f4f, #2e8b57, #3cb371); /* Dark slate grey text color gradient for inverted theme */
+
+//   --border-color: linear-gradient(45deg, #4b0082, #800080, #8b008b); /* Indigo border color gradient */
+//   --inverted-border-color: linear-gradient(45deg, #ffa07a, #ff7f50, #ff6347); /* Light salmon border color gradient for inverted theme */
+
+//   --link-color: linear-gradient(45deg, #00ced1, #20b2aa, #48d1cc); /* Dark turquoise link color gradient */
+//   --inverted-link-color: linear-gradient(45deg, #ff1493, #ff69b4, #ff6eb4); /* Deep pink link color gradient for inverted theme */
+
+//   --link-hover-color: linear-gradient(45deg, #20b2aa, #3cb371, #2e8b57); /* Light sea green for link hover gradient */
+//   --inverted-link-hover-color: linear-gradient(45deg, #ff69b4, #ff6eb4, #ff7f50); /* Hot pink for link hover in inverted theme gradient */
+// }
+
+.light {
+  --bg-color: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8);
+  --inverted-bg-color: #f0f0f5; /* Light space grey background for inverted theme */
+  --primary-color: #8a2be2; /* Electric indigo primary color */
+  --inverted-primary-color: #ff4500; /* Orange red primary color for inverted theme */
+  --secondary-color: linear-gradient(
+    to right,
+    #483d8b,
+    #ff6347
+  ); /* Dark slate blue secondary color */
+  --inverted-secondary-color: #ff6347; /* Tomato secondary color for inverted theme */
+  --text-color: #dcdcdc; /* Gainsboro text color */
+  --inverted-text-color: #2f4f4f; /* Dark slate grey text color for inverted theme */
+  --border-color: #4b0082; /* Indigo border color */
+  --inverted-border-color: #ffa07a; /* Light salmon border color for inverted theme */
+  --link-color: #00ced1; /* Dark turquoise link color */
+  --inverted-link-color: #ff1493; /* Deep pink link color for inverted theme */
+  --link-hover-color: #20b2aa; /* Light sea green for link hover */
+  --inverted-link-hover-color: #ff69b4; /* Hot pink for link hover in inverted theme */
+}
