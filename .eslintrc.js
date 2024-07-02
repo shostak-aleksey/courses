@@ -42,13 +42,15 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': [
-            'error',
-            {
-                markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to'],
-            },
-        ],
+        'linebreak-style': [0, 'error', 'windows'],
+        'i18next/no-literal-string': 'off',
+        //  [
+        //     'error',
+        //     {
+        //         markupOnly: true,
+        //         ignoreAttribute: ['data-testid', 'to'],
+        //     },
+        // ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',

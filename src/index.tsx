@@ -1,6 +1,6 @@
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './app/app';
+import App from './app/App';
 import { ThemeProvider } from './app/provider/ThemeProvider';
 import { CollapseProvider } from './shared/ui/CollapseBtn/CollapseBtnContext';
 import { ErrorBoundary } from './app/provider/ErrorBoundary';
