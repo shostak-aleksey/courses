@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTheme } from 'app/provider/ThemeProvider';
+import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
@@ -18,7 +19,6 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
                 onChange={toggleTheme}
                 className={cls.hideCheckbox}
             />
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="hide-checkbox" className={cls.toggle}>
                 <span className={cls.toggleButton}>
                     <i

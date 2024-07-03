@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/provider/ThemeProvider';
+import { Theme } from 'app/providers/ThemeProvider';
 import { Button, ButtonProps, ThemeButton } from './Button';
 import 'app/styles/index.scss';
 

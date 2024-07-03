@@ -3,8 +3,8 @@ import { Suspense } from 'react';
 import { Navbar } from 'widgets/Navbar';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Sidebar } from 'widgets/Sidebar/ui';
-import { AppRouter } from './provider/router';
-import { useTheme } from './provider/ThemeProvider/lib/useTheme';
+import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProvider/lib/useTheme';
 
 function App() {
     const { theme } = useTheme();
