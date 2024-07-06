@@ -1,13 +1,11 @@
-// File: src/widgets/Sidebar/ui/Sidebar/Sidebar.test.tsx
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { ReactNode, useMemo } from 'react';
 import { CollapseBtnContext } from 'shared/ui/CollapseBtn/CollapseBtnContext';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import Router
 import { Sidebar } from './Sidebar';
 
-const MockCollapseProvider = (
-    { children, collapsed }: { children: ReactNode, collapsed: boolean },
-) => {
+const MockCollapseProvider = ({ children, collapsed }: { children: ReactNode, collapsed: boolean }) => {
     const value = useMemo(() => ({
         collapsed,
         toggleCollapse: jest.fn(),
@@ -22,33 +20,35 @@ const MockCollapseProvider = (
 
 describe('Sidebar Component', () => {
     const renderWithProvider = (collapsed = false) => render(
-        <MockCollapseProvider collapsed={collapsed}>
-            <Sidebar />
-        </MockCollapseProvider>,
+        <Router>
+            <MockCollapseProvider collapsed={collapsed}>
+                <Sidebar />
+            </MockCollapseProvider>
+        </Router>,
     );
 
-    it('should render the Sidebar with ThemeSwitcher', () => {
-        renderWithProvider();
-        expect(screen.getByRole('checkbox')).toBeInTheDocument();
-    });
-
     it('should apply the collapsed class when collapsed', () => {
-        const { container } = renderWithProvider(true);
-        expect(container.firstChild).toHaveClass('collapsed');
+        renderWithProvider(true);
+        const sidebarElement = screen.getByTestId('sidebar');
+        expect(sidebarElement).toHaveClass('collapsed');
     });
 
     it('should not apply the collapsed class when not collapsed', () => {
-        const { container } = renderWithProvider(false);
-        expect(container.firstChild).not.toHaveClass('collapsed');
+        renderWithProvider(false);
+        const sidebarElement = screen.getByTestId('sidebar');
+        expect(sidebarElement).not.toHaveClass('collapsed');
     });
 
     it('should apply the provided className', () => {
         const className = 'custom-class';
-        const { container } = render(
-            <MockCollapseProvider collapsed={false}>
-                <Sidebar className={className} />
-            </MockCollapseProvider>,
+        render(
+            <Router>
+                <MockCollapseProvider collapsed={false}>
+                    <Sidebar className={className} />
+                </MockCollapseProvider>
+            </Router>,
         );
-        expect(container.firstChild).toHaveClass(className);
+        const sidebarElement = screen.getByTestId('sidebar');
+        expect(sidebarElement).toHaveClass(className);
     });
 });

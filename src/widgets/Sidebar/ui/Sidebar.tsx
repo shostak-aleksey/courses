@@ -16,6 +16,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
         <div
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+            data-testid="sidebar"
         >
             <div className={cls.links}>
                 <AppLink
