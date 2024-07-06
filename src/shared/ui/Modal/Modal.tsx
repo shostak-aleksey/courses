@@ -1,52 +1,48 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
-    ReactNode, useCallback, useEffect, useRef, useState,
+    ReactNode, useState, useCallback, useRef,
+    useEffect,
 } from 'react';
-import { Portal } from 'shared/ui/Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
+import { Portal } from '../Portal/Portal';
 
 interface ModalProps {
-    className?: string;
-    children?: ReactNode;
-    isOpen?: boolean;
-    onClose?: () => void;
+  className?: string;
+  children?: ReactNode;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
-
-const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
     const {
-        className,
-        children,
-        isOpen,
-        onClose,
+        className, children, isOpen, onClose,
     } = props;
 
+    const ANIMATION_DELAY = 150;
+
     const [isClosing, setIsClosing] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme();
+
+    const mods: Record<string, boolean> = {
+        [cls.opened]: isOpen,
+        [cls.isClosing]: isClosing,
+    };
+    const timeRef = useRef<ReturnType<typeof setTimeout>>();
 
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
-            timerRef.current = setTimeout(() => {
+            timeRef.current = setTimeout(() => {
                 onClose();
                 setIsClosing(false);
             }, ANIMATION_DELAY);
         }
     }, [onClose]);
 
-    // Новые ссылки!!!
     const onKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             closeHandler();
         }
     }, [closeHandler]);
-
-    const onContentClick = (e: React.MouseEvent) => {
-        e.stopPropagation();
-    };
 
     useEffect(() => {
         if (isOpen) {
@@ -54,29 +50,30 @@ export const Modal = (props: ModalProps) => {
         }
 
         return () => {
-            clearTimeout(timerRef.current);
+            clearTimeout(timeRef.current);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
-
-    const mods: Record<string, boolean> = {
-        [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
+    const onContentClick = (e: React.MouseEvent) => {
+        e.stopPropagation();
     };
 
     return (
-        <Portal>
-            <div className={classNames(cls.Modal, mods, [className])}>
-                <div className={cls.overlay} onClick={closeHandler}>
-                    <div
-                        className={cls.content}
-                        onClick={onContentClick}
-                    >
-                        {children}
-                    </div>
+        <div className={classNames(cls.modal, mods, [className])}>
+            <div onClick={closeHandler} className={cls.overlay}>
+                <div className={cls.content} onClick={onContentClick}>
+                    Lorem, ipsum
+                    dolor sit amet
+                    consectetur
+                    adipisicing elit. Quis, explicabo? Laborum perspiciatis,
+                    placeat magni
+                    consectetur neque odit a quidem nam amet similique null
+                    a fuga, eum voluptate,
+                    sed ipsum unde
+                    repellat.
                 </div>
+                {children}
             </div>
-        </Portal>
+        </div>
     );
 };

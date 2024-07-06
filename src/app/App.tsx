@@ -1,8 +1,7 @@
-import './styles/index.scss';
 import { Suspense } from 'react';
 import { Navbar } from 'widgets/Navbar';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Sidebar } from 'widgets/Sidebar/ui';
+import { Sidebar } from 'widgets/Sidebar';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider/lib/useTheme';
 
@@ -12,6 +11,7 @@ function App() {
         <div className={` ${classNames('app', { 'some-class': false }, [theme])}`}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Navbar />
+
                 <div className="content-page">
                     <Sidebar />
                     <AppRouter />
@@ -20,5 +20,4 @@ function App() {
         </div>
     );
 }
-
 export default App;

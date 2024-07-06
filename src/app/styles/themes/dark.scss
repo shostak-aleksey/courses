@@ -1,4 +1,4 @@
-.app.dark {
+.dark {
   --bg-color: #121212;
   --inverted-bg-color: #f0f4f8;
   --primary-color: #0e1e3c;
@@ -13,4 +13,6 @@
   --inverted-link-color: #c0392b;
   --link-hover-color: #ffa500;
   --inverted-link-hover-color: #f39c12;
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --overlay-closed-color: rgba(0, 0, 0, 0.1);
 }
