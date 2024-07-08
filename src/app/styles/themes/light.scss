@@ -16,30 +16,34 @@
 
 //   --link-color: linear-gradient(45deg, #00ced1, #20b2aa, #48d1cc); /* Dark turquoise link color gradient */
 //   --inverted-link-color: linear-gradient(45deg, #ff1493, #ff69b4, #ff6eb4); /* Deep pink link color gradient for inverted theme */
-
+// linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8)
 //   --link-hover-color: linear-gradient(45deg, #20b2aa, #3cb371, #2e8b57); /* Light sea green for link hover gradient */
 //   --inverted-link-hover-color: linear-gradient(45deg, #ff69b4, #ff6eb4, #ff7f50); /* Hot pink for link hover in inverted theme gradient */
 // }
 
 .light {
-  --bg-color: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8);
-  --inverted-bg-color: #f0f0f5; /* Light space grey background for inverted theme */
-  --primary-color: #8a2be2; /* Electric indigo primary color */
-  --inverted-primary-color: #ff4500; /* Orange red primary color for inverted theme */
-  --secondary-color: linear-gradient(
-    to right,
-    #483d8b,
-    #ff6347
-  ); /* Dark slate blue secondary color */
-  --inverted-secondary-color: #ff6347; /* Tomato secondary color for inverted theme */
-  --text-color: #dcdcdc; /* Gainsboro text color */
-  --inverted-text-color: #2f4f4f; /* Dark slate grey text color for inverted theme */
-  --border-color: #4b0082; /* Indigo border color */
-  --inverted-border-color: #ffa07a; /* Light salmon border color for inverted theme */
-  --link-color: #00ced1; /* Dark turquoise link color */
-  --inverted-link-color: #ff1493; /* Deep pink link color for inverted theme */
-  --link-hover-color: #20b2aa; /* Light sea green for link hover */
-  --inverted-link-hover-color: #ff69b4; /* Hot pink for link hover in inverted theme */
+  --bg-color-start: #ff6b6b;
+  --bg-color-middle: #f06595;
+  --bg-color-end: #cc5de8;
+  --bg-color: #f06595;
+  --inverted-bg-color: #f0f0f5;
+  --primary-color: #8a2be2;
+  --inverted-primary-color: #ff4500;
+  --secondary-color: linear-gradient(    to right,    #483d8b,    #ff6347  );
+  --inverted-secondary-color: #ff6347;
+  --text-color: #dcdcdc;
+  --inverted-text-color: #2f4f4f;
+  --border-color: #4b0082;
+  --inverted-border-color: #ffa07a;
+  --link-color: #00ced1;
+  --inverted-link-color: #ff1493;
+  --link-hover-color: #20b2aa;
+  --inverted-link-hover-color: #ff69b4;
   --overlay-color: rgba(0, 0, 0, 0.5);
   --overlay-closed-color: rgba(0, 0, 0, 0.1);
+  // transition: all .3s ease;
+  // -webkit-transition: all .3s ease;
+  // -moz-transition: all .3s ease;
+  // -ms-transition: all .3s ease;
+  // -o-transition: all .3s ease;
 }

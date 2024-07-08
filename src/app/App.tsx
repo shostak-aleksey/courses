@@ -8,7 +8,7 @@ import { useTheme } from './providers/ThemeProvider/lib/useTheme';
 function App() {
     const { theme } = useTheme();
     return (
-        <div className={` ${classNames('app', { 'some-class': false }, [theme])}`}>
+        <div className={` ${classNames('app', { }, [theme])}`}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Navbar />
 

@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: space-around;
   transition:
     justify-content 0.3s,
     align-items 0.3s,
@@ -16,15 +17,40 @@
   }
 }
 
+.linksColumn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  color: var(--inverted-text-color);
+     &:hover {
+        .svg {
+            fill: var(--inverted-primary-color); // Изменение цвета SVG иконки при наведении
+        }
+        .link {
+            color: var(--inverted-primary-color); // Изменение цвета текста ссылки при наведении
+        }
+    }
+
+    .svg {
+        margin: 0 10px;
+        fill: var(--primary-color);
+        transition: fill 0.3s; // Плавное изменение цвета SVG иконки
+    }
+}
+
+.svg {
+  margin: 0 10px;
+  fill: var(--primary-color);
+}
 .links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: space-between;
-  height: 100%;
   color: var(--inverted-text-color);
+
 }
 
 .link {
-  margin: 10px 0;
+  margin: 10px 0px;
 }

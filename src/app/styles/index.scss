@@ -5,28 +5,16 @@
 
 
 .app {
-  font: var(--font-m);
-  color: var(--text-color);
+  // background: linear-gradient(45deg, var(--bg-color-start), var(--bg-color-middle), var(--bg-color-end));
   background: var(--bg-color);
   min-height: 100vh;
-  -o-transition:
-    color 0.3s ease-in-out,
-    background 0.3s ease-in-out;
-  -webkit-transition:
-    color 0.3s ease-in-out,
-    background 0.3s ease-in-out;
-  -moz-transition:
-    color 0.3s ease-in-out,
-    background 0.3s ease-in-out;
-  -ms-transition:
-    color 0.3s ease-in-out,
-    background 0.3s ease-in-out;
-  transition:
-    color 0.3s ease-in-out,
-    background 0.3s ease-in-out;
-  .border {
-    border: 1px solid var(--border-color);
-  }
+  transition: background .3s  ;
+  -webkit-transition: background .3s  ;
+  -moz-transition: background .3s  ;
+  -ms-transition: background .3s  ;
+  -o-transition: background .3s  ;
+  font: var(--font-m);
+  color: var(--text-color);
 }
 
 .content-page {

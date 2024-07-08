@@ -4,7 +4,6 @@ import React, {
     useEffect,
 } from 'react';
 import cls from './Modal.module.scss';
-import { Portal } from '../Portal/Portal';
 
 interface ModalProps {
   className?: string;
