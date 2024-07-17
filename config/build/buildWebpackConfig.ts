@@ -17,6 +17,11 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             path: paths.build,
             clean: true,
         },
+        performance: {
+            hints: false,
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000,
+        },
         plugins: buildPlugins(options),
         module: {
             rules: buildLoaders(options),
