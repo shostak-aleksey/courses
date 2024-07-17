@@ -4,8 +4,10 @@
 @import 'themes/dark';
 
 
+
 .app {
-  // background: linear-gradient(45deg, var(--bg-color-start), var(--bg-color-middle), var(--bg-color-end));
+  font: var(--font-m);
+  color: var(--text-color);
   background: var(--bg-color);
   min-height: 100vh;
   transition: background .3s  ;
@@ -13,8 +15,6 @@
   -moz-transition: background .3s  ;
   -ms-transition: background .3s  ;
   -o-transition: background .3s  ;
-  font: var(--font-m);
-  color: var(--text-color);
 }
 
 .content-page {

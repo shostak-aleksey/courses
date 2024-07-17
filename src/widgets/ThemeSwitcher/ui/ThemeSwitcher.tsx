@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTheme } from 'app/providers/ThemeProvider';
+import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
@@ -15,7 +15,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             <input
                 type="checkbox"
                 id="hide-checkbox"
-                checked={theme === 'light'}
+                checked={theme === 'app_light_theme'}
                 onChange={toggleTheme}
                 className={cls.hideCheckbox}
             />

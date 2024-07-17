@@ -21,7 +21,7 @@
 //   --inverted-link-hover-color: linear-gradient(45deg, #ff69b4, #ff6eb4, #ff7f50); /* Hot pink for link hover in inverted theme gradient */
 // }
 
-.light {
+.app_light_theme{
   --bg-color-start: #ff6b6b;
   --bg-color-middle: #f06595;
   --bg-color-end: #cc5de8;
@@ -32,6 +32,7 @@
   --secondary-color: linear-gradient(    to right,    #483d8b,    #ff6347  );
   --inverted-secondary-color: #ff6347;
   --text-color: #dcdcdc;
+  --error-color: #f0f0f5;
   --inverted-text-color: #2f4f4f;
   --border-color: #4b0082;
   --inverted-border-color: #ffa07a;

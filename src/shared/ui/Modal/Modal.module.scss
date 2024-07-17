@@ -7,7 +7,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: -1;
-    color: var(--primary-color);
+    // color: var(--primary-color);
 }
 
 
@@ -30,6 +30,7 @@
     border-radius: 12px;
     font: var(--font-l);
     background: var(--bg-color);
+    color: var(--text-color);
     -o-transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;

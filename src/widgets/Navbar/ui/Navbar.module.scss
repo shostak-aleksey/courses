@@ -1,8 +1,8 @@
 .Navbar {
+  padding: var(--content-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
   height: var(--navbar-height);
   width: 100%;
   background: var(--inverted-bg-color);

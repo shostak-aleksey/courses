@@ -3,7 +3,9 @@ import React, {
     ReactNode, useState, useCallback, useRef,
     useEffect,
 } from 'react';
+import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
+import { Portal } from '../Portal/Portal';
 
 interface ModalProps {
   className?: string;
@@ -13,6 +15,7 @@ interface ModalProps {
 }
 
 export const Modal = (props: ModalProps) => {
+    const { theme } = useTheme();
     const {
         className, children, isOpen, onClose,
     } = props;
@@ -58,21 +61,15 @@ export const Modal = (props: ModalProps) => {
     };
 
     return (
-        <div className={classNames(cls.modal, mods, [className])}>
-            <div onClick={closeHandler} className={cls.overlay}>
-                <div className={cls.content} onClick={onContentClick}>
-                    Lorem, ipsum
-                    dolor sit amet
-                    consectetur
-                    adipisicing elit. Quis, explicabo? Laborum perspiciatis,
-                    placeat magni
-                    consectetur neque odit a quidem nam amet similique null
-                    a fuga, eum voluptate,
-                    sed ipsum unde
-                    repellat.
+        <Portal>
+            <div className={classNames(cls.modal, mods, [className, theme])}>
+                <div onClick={closeHandler} className={cls.overlay}>
+                    <div className={cls.content} onClick={onContentClick}>
+
+                        {children}
+                    </div>
                 </div>
-                {children}
             </div>
-        </div>
+        </Portal>
     );
 };
